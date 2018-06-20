@@ -1,0 +1,368 @@
+/*
+ *
+ * CSS Reset
+ *
+ */
+ * {
+ 	padding: 0;
+ 	margin: 0;
+ 	box-sizing: border-box;
+ }
+
+/*
+ *
+ * General Rules
+ *
+ */
+ header {
+ 	/*min-height: 10vh;*/
+ 	background-color: red;
+  width: 100%;
+  text-align: center;
+ }
+
+ header.row > div.col > img {
+  width: 104%;
+  float: left;
+ }
+
+ header.row > div.Title {
+
+ }
+
+ header.row > nav > ul > li {
+  /*vertical-align: baseline;*/
+  display: inline-block;
+  background-color: powderblue;
+ }
+
+ main {
+  min-height: 80vh;
+  background-color: yellow;
+ }
+
+ main > div.left,
+ main > div.right {
+  min-height: 100%;
+  color: white;
+ }
+
+
+ /*
+ *
+ * Left
+ *
+ */
+
+ main > div.left {
+ 	background-color: white;
+ 	color: black;
+  text-align: left;
+ }
+
+ main.row > div.left > div > h2 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  letter-spacing: 1px;
+  color: #de2856;
+  font-family: 'Special Elite', cursive;
+}
+
+main.row > div.left > div {
+  margin: auto 0;
+  width: 100%;
+}
+
+main.row > div.left > div > p {
+  text-align: justify;
+  margin: 15px;
+  line-height: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+main.row > div.left > div > div {
+  padding-bottom: 0 25px; 
+}
+
+main.row > div.left > div > div > img {
+  float: left;
+  margin: 0px 10px 5px 5px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  width: 200px;
+  height: 150px;
+  text-align: left;
+}
+
+/*
+ *
+ * Right
+ *
+ */
+
+ main > div.right {
+  background-color: #907350;
+  color: white;
+}
+
+main.row > div.right > div > div {
+  text-align: justify;
+  padding: 15px;
+}
+
+main.row > div.right > div > div > img {
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+main.row > div.right > div > div > h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+main.row > div.right > div > div > p {
+  line-height: 21px;
+}
+
+
+/*
+ *
+ * Footer
+ *
+ */
+
+ footer	{
+ 	min-height: 10vh;
+ 	background-color: orange;
+ }
+
+ footer [id^="col"] {
+  padding: 10px;
+}
+
+footer [id^="col"] > div > h3 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+footer [id^="col"] > div > div > img {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+footer [id^="col"] > div > p {
+  text-align: justify;
+  line-height: 15px;
+}
+
+[id^="col"] {
+  min-height: 15vh;
+}
+
+#col1 {
+  background-color: #5f8971;
+}
+#col2 {
+  background-color: #36563e;
+}
+#col3 {
+  background-color: #5a8b5d;
+}
+#col4 {
+  background-color: #bec991;
+}
+
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ /*
+  *
+  * Custom CSS Fluid Grid System
+  *
+  */
+  .container {
+  	width: 80vw;
+  	margin: 0 auto;
+  }
+
+  .container-fluid {
+  	width: 100vw;
+  }
+
+  .row:after {
+  	content: "";
+  	display: block;
+  	clear: both;
+  }
+
+  [class*="col"] {
+  	float: left;
+  }
+
+  /*
+   *
+   * Destop Device
+   *
+   */
+   @media only screen and (min-width: 961px) {
+
+   	.col-lg-1 {
+   		width: 8.33%; /* 100% / 12 columns = 8.33% */
+   	}
+   	.col-lg-2 {
+   		width: 16.66%;
+   	}
+   	.col-lg-3 {
+   		width: 25%;
+   	}
+   	.col-lg-4 {
+   		width: 33.33%;
+   	}
+   	.col-lg-5 {
+   		width: 41.66%;
+   	}
+   	.col-lg-6 {
+   		width: 50%;
+   	}
+   	.col-lg-7 {
+   		width: 58.33%;
+   	}
+   	.col-lg-8 {
+   		width: 66.66%;
+   	}
+   	.col-lg-9 {
+   		width: 75%;
+   	}
+   	.col-lg-10 {
+   		width: 83.33%;
+   	}
+   	.col-lg-11 {
+   		width: 91.66%;
+   	}
+   	.col-lg-12 {
+   		width: 100%;
+   	}
+
+   }
+
+   /*
+    *
+    * Tablet
+    *
+    */
+    @media only screen and (min-width: 401px) and (max-width: 960px) {
+
+     .container {
+      width: 100vw;
+    }
+
+    main.row > div.right > div > div > img {
+      width: 50%;
+      float: left;
+      padding: 0 10px;
+    }
+
+    main.row > div.right > div > div > p {
+      /*padding-top: 10px;*/
+    }
+
+    .col-md-1 {
+      width: 8.33%; /* 100% / 12 columns = 8.33% */
+    }
+    .col-md-2 {
+      width: 16.66%;
+    }
+    .col-md-3 {
+      width: 25%;
+    }
+    .col-md-4 {
+      width: 33.33%;
+    }
+    .col-md-5 {
+      width: 41.66%;
+    }
+    .col-md-6 {
+      width: 50%;
+    }
+    .col-md-7 {
+      width: 58.33%;
+    }
+    .col-md-8 {
+      width: 66.66%;
+    }
+    .col-md-9 {
+      width: 75%;
+    }
+    .col-md-10 {
+      width: 83.33%;
+    }
+    .col-md-11 {
+      width: 91.66%;
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+
+  }
+
+
+  /*
+   *
+   * Mobile Device
+   *
+   */
+   @media only screen and (max-width: 400px) {
+
+   	.container {
+   		width: 100vw;
+   	}
+
+     footer [id^="col"] > div > div > img {
+       float: left;
+       width: 100%;
+       padding: 5px;
+     }
+
+     .col-sm-1 {
+       width: 8.33%; /* 100% / 12 columns = 8.33% */
+     }
+     .col-sm-2 {
+       width: 16.66%;
+     }
+     .col-sm-3 {
+       width: 25%;
+     }
+     .col-sm-4 {
+       width: 33.33%;
+     }
+     .col-sm-5 {
+       width: 41.66%;
+     }
+     .col-sm-6 {
+       width: 50%;
+     }
+     .col-sm-7 {
+       width: 58.33%;
+     }
+     .col-sm-8 {
+       width: 66.66%;
+     }
+     .col-sm-9 {
+       width: 75%;
+     }
+     .col-sm-10 {
+       width: 83.33%;
+     }
+     .col-sm-11 {
+       width: 91.66%;
+     }
+     .col-sm-12 {
+       width: 100%;
+     }
+
+   }
